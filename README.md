@@ -1,2 +1,2 @@
-# sql-portfolio
-SQL portfolio with real-world business queries and data analysis projects using MySQL.
+# data-analytics-portfolio
+A portfolio of real-world Data Analytics projects using SQL, Power BI. Focused on business analysis, dashboard development, and data-driven decision making.
