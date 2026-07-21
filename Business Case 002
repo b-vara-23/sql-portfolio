@@ -1,0 +1,35 @@
+/*
+=========================================================
+Business Case 002
+Employees Above Company Average Salary
+=========================================================
+
+Business Question:
+Find all current employees whose current salary is higher
+than the average salary of the company.
+
+Skills Used:
+- Subquery
+- INNER JOIN
+- Aggregate Function (AVG)
+- Filtering
+
+Database:
+employees
+=========================================================
+*/
+SELECT 
+    e.emp_no, e.first_name, e.last_name, s.salary
+FROM
+    employees e
+        JOIN
+    salaries s ON e.emp_no = s.emp_no
+WHERE
+    s.to_date = '9999-01-01'
+        AND s.salary > (SELECT 
+            AVG(salary)
+        FROM
+            salaries
+        WHERE
+            to_date = '9999-01-01')
+ORDER BY s.salary DESC;
